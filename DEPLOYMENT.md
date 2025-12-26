@@ -4,12 +4,18 @@ This portfolio is built with Next.js 15 and Tailwind CSS v4.
 
 ## Deploy to Vercel (Recommended)
 
-1.  Push this code to a GitHub repository.
-2.  Go to [Vercel](https://vercel.com) and sign up/login.
-3.  Click "Add New..." -> "Project".
-4.  Import your GitHub repository.
-5.  Vercel will automatically detect the Next.js framework.
-6.  Click "Deploy".
+1.  Create a new repository on [GitHub](https://github.com/new). Do not initialize it with a README, .gitignore, or License.
+2.  Link your local repository to GitHub and push:
+    ```bash
+    git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+    git branch -M main
+    git push -u origin main
+    ```
+3.  Go to [Vercel](https://vercel.com) and sign up/login.
+4.  Click "Add New..." -> "Project".
+5.  Import your specific GitHub repository.
+6.  Vercel will automatically detect the Next.js framework.
+7.  Click "Deploy".
 
 ## Deploy to Netlify
 

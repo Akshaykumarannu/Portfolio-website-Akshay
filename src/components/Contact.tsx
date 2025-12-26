@@ -13,9 +13,21 @@ export default function Contact() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log("Form submitted:", formState);
-        alert("Message sent! (This is a demo)");
+        const { name, email, message } = formState;
+
+        // Construct the WhatsApp message
+        const messageText = `*Name:* ${name}\n*Email:* ${email}\n*Message:* ${message}`;
+        const whatsappUrl = `https://wa.me/919740791523?text=${encodeURIComponent(messageText)}`;
+
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, '_blank');
+
+        // Reset form
+        setFormState({
+            name: "",
+            email: "",
+            message: "",
+        });
     };
 
     return (
@@ -53,7 +65,7 @@ export default function Contact() {
                                     </div>
                                     <div>
                                         <h4 className="font-semibold mb-1">Email</h4>
-                                        <a href="mailto:akshay@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+                                        <a href="mailto:akshayyrai@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                                             akshayyrai@gmail.com
                                         </a>
                                     </div>
@@ -64,7 +76,7 @@ export default function Contact() {
                                     </div>
                                     <div>
                                         <h4 className="font-semibold mb-1">Phone</h4>
-                                        <a href="tel:+919876543210" className="text-muted-foreground hover:text-primary transition-colors">
+                                        <a href="tel:+919740791523" className="text-muted-foreground hover:text-primary transition-colors">
                                             +91 97407 91523
                                         </a>
                                     </div>
@@ -83,7 +95,7 @@ export default function Contact() {
 
                         {/* Floating Action Button for WhatsApp */}
                         <a
-                            href="https://wa.me/919876543210"
+                            href="https://wa.me/919740791523"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] text-white rounded-full font-bold hover:bg-[#128C7E] transition-colors shadow-lg"
