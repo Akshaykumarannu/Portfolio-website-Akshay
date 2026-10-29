@@ -133,28 +133,32 @@ export default function Certificates() {
     }
 
     return (
-        <section id="certificates" className="py-20 relative bg-secondary/5 overflow-hidden">
-            <div className="container mx-auto px-6">
+        <section id="certificates" className="py-24 relative bg-[#080808] overflow-hidden border-t border-white/[0.06]">
+            <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
-                    className="text-center mb-16"
+                    className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Certifications</h2>
-                    <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
-                    <p className="mt-4 text-muted-foreground">
-                        Recognition of my skills and participation in various technical events.
-                    </p>
+                    <div>
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-sky-400 uppercase tracking-widest mb-4">
+                            <span>06 / VERIFIED CREDENTIALS</span>
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white max-w-2xl">
+                            Certifications &amp; <span className="text-sky-400">Continuous Learning</span>.
+                        </h2>
+                    </div>
 
                     <a
                         href="https://drive.google.com/drive/folders/1ADjm04elM_XVZMUWmMNK92I67PTbDrkE"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 mt-6 px-6 py-2 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors shadow-lg"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 text-white text-xs font-mono tracking-wide transition-all self-start md:self-auto"
                     >
-                        <FileText size={18} /> View All Certificates on Drive
+                        <FileText size={15} className="text-sky-400" />
+                        <span>All Certificates on Drive</span>
                     </a>
                 </motion.div>
 

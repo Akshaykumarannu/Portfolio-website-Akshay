@@ -142,7 +142,7 @@ export default function Background3D() {
     return (
         <canvas
             ref={canvasRef}
-            className="fixed inset-0 z-[-1] opacity-20 dark:opacity-20 pointer-events-none"
+            className="fixed inset-0 z-[-1] opacity-[0.06] pointer-events-none"
         />
     );
 }

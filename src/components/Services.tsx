@@ -5,69 +5,73 @@ import { Code, Layout, BarChart3, Smartphone, Globe, Rocket } from "lucide-react
 
 const services = [
     {
-        title: "Web Development",
-        description: "Building fast, responsive, and secure websites using modern technologies like React, Next.js, and Tailwind CSS.",
-        icon: <Globe size={32} />,
+        title: "Frontend Development",
+        description: "Crafting lightning-fast, modular, and reactive web applications with React.js, Next.js, and TypeScript.",
+        icon: <Globe size={26} className="text-sky-400" />,
     },
     {
-        title: "UI/UX Design",
-        description: "Creating intuitive and visually appealing user interfaces that provide seamless user experiences.",
-        icon: <Layout size={32} />,
+        title: "Dashboard & SaaS Engineering",
+        description: "Designing data-rich, interactive analytics portals with real-time tracking, charts, and state management.",
+        icon: <BarChart3 size={26} className="text-sky-400" />,
     },
     {
-        title: "Dashboard Development",
-        description: "Developing interactive and data-driven dashboards to visualize complex data effectively.",
-        icon: <BarChart3 size={32} />,
+        title: "UI/UX & Design Systems",
+        description: "Creating accessible, pixel-perfect user interfaces and reusable component libraries with Tailwind CSS.",
+        icon: <Layout size={26} className="text-sky-400" />,
     },
     {
-        title: "Responsive Design",
-        description: "Ensuring your website looks amazing on all devices, from mobile phones to large desktop screens.",
-        icon: <Smartphone size={32} />,
+        title: "Responsive Mobile-First UX",
+        description: "Ensuring faultless performance and adaptive layouts across smartphones, tablets, laptops, and ultra-wide screens.",
+        icon: <Smartphone size={26} className="text-sky-400" />,
     },
     {
         title: "Performance Optimization",
-        description: "Optimizing website performance for faster load times and better SEO rankings.",
-        icon: <Rocket size={32} />,
+        description: "Fine-tuning Core Web Vitals, reducing bundle sizes, and achieving near 100 Lighthouse performance metrics.",
+        icon: <Rocket size={26} className="text-sky-400" />,
     },
     {
-        title: "Custom Solutions",
-        description: "Tailored software solutions to meet your specific business needs and requirements.",
-        icon: <Code size={32} />,
+        title: "API & Full-Stack Integration",
+        description: "Connecting complex frontend states to RESTful endpoints, backend microservices, and databases smoothly.",
+        icon: <Code size={26} className="text-sky-400" />,
     },
 ];
 
 export default function Services() {
     return (
-        <section id="services" className="py-20 bg-white/5">
-            <div className="container mx-auto px-6">
+        <section id="services" className="py-24 bg-[#0a0a0a] relative overflow-hidden border-t border-white/[0.06]">
+            <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
-                    className="text-center mb-16"
+                    className="mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">My Services</h2>
-                    <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-sky-400 uppercase tracking-widest mb-4">
+                        <span>SERVICES &amp; CAPABILITIES</span>
+                    </div>
+                    <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white max-w-2xl">
+                        High-impact solutions for <span className="text-sky-400">digital growth</span>.
+                    </h2>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="p-8 rounded-2xl bg-background border border-white/10 hover:border-primary/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10"
+                            transition={{ duration: 0.5, delay: index * 0.08 }}
+                            className="p-8 rounded-3xl bg-[#121212] border border-white/[0.08] hover:border-sky-500/40 transition-all duration-300 group hover:-translate-y-1.5"
                         >
-                            <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <div className="w-12 h-12 rounded-2xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center mb-6 group-hover:bg-sky-500/10 group-hover:border-sky-500/30 transition-colors">
                                 {service.icon}
                             </div>
-                            <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                            <h3 className="text-xl font-bold text-white mb-2.5 group-hover:text-sky-300 transition-colors">
                                 {service.title}
                             </h3>
-                            <p className="text-gray-400 leading-relaxed">
+                            <p className="text-zinc-400 text-sm leading-relaxed font-light">
                                 {service.description}
                             </p>
                         </motion.div>

@@ -1,10 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Skills from "@/components/Skills";
-import Education from "@/components/Education";
-import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 import Certificates from "@/components/Certificates";
 import Services from "@/components/Services";
 import Contact from "@/components/Contact";
@@ -14,14 +14,14 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground selection:bg-primary/30 selection:text-white">
+    <main className="min-h-screen bg-[#080808] text-[#F5F5F5] selection:bg-sky-500/30 selection:text-white">
       <Navbar />
       <Hero />
       <About />
-      <Skills />
-      <Education />
-      <Experience />
       <Projects />
+      <Skills />
+      <Experience />
+      <Education />
       <Certificates />
       <Services />
       <Contact />
